@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>Planisferio Interactivo</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet"  href="jquery.mobile-1.3.2.css">
+		<script src="jquery.js"></script>
+		<script src="jquery.mobile-1.3.2.min.js"></script>
+		<script src="planisferioGame.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<!-- -->
+		<script type="text/javascript" charset="utf-8">
+		    // Wait for Cordova to load
+		    //
+		    document.addEventListener("deviceready", onDeviceReady, false);
+		    // Cordova is ready
+		    //
+		    function onDeviceReady() {
+		        navigator.splashscreen.show();
+		        setTimeout(function() {
+		        navigator.splashscreen.hide();
+				}, 2000);
+		    }
+        </script>
+		 
+	</head>
+	<body>
+	
+	<div data-role="page"data-theme="a" id="pantalla">
+	<div data-role="header"  id="pantallah">
+	                <h1>PLANISFERIO INTERACTIVO</h1>
+	        <a href="#nav-panel"  data-icon="bars" data-iconpos="notext">MENÚ</a>
+	        <a href="#add-panel" data-icon="star" data-iconpos="notext">ORIENTACIÒN</a>
+	        <!-- /<a href="#"  data-icon="search" data-iconpos="notext">Search</a>-->
+		</div><!-- /header -->
+	
+		<div data-role="content" id="pantallac" >
+		
+	
+	<!--	<canvas id="c" style="position: absolute;">
+	Your browser does not support the canvas element.
+	</canvas>
+		<canvas id="c2" style="position: absolute;">
+	Your browser does not support the canvas element.
+	</canvas>-->
+
+	
+	
+	</div><!-- /content -->
+	<!--
+		<div data-role="footer" data-position="fixed" >
+		
+			<p>Copyright 2013 The jQuery Foundation</p>
+		</div> /jqm-footer -->
+	
+	
+	
+	
+	<!-- nav-panelG  -->
+		
+	
+	
+	<div data-role="panel" data-position="left" data-display="overlay"  data-theme="a" id="nav-panel">
+				
+				<ul data-role="listview"     >
+					<li data-icon="delete"><a href="#" data-rel="close" id="botCerrar"><h1>MENÚ</h1></a></li>
+					
+				</ul> 			
+				
+				<p>											
+					<ul data-role="listview" data-theme="a">
+						<!--<li><a id ="botInicio" href="#panel-fixed-page2">INICIO</a></li>-->
+						<li><a id="botHorizonte" href="#">HORIZONTE NORTE/SUR</a></li>
+						<li><a id="botLineas" href="#">LÍNEAS CONSTELACIONES</a></li>
+						<li><a id="botNombres" href="#">NOMBRES CONSTELACIONES</a></li>					
+						<li><a id="botMascara" href="#">MÁSCARA</a></li>
+						<li><a id="botNocturno" href="#">NOCTURNO</a></li>
+						<li><a id="botDefault" href="#">DEFAULT</a></li>
+						<li><a id="botJuego" href="#">JUEGO</a></li>
+						<li><a id="botEntrena" href="#">ENTRENAMIENTO</a></li>
+						<li><a id="botRanking" href="#">RANKING</a></li>
+						
+					</ul>
+				</p>	
+					
+				  
+	</div><!-- nav-panel  -->
+			
+			<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-panel">
+				<ul data-role="listview" data-theme="c" >
+					<li data-icon="delete"><a href="#" data-rel="close"><h1>ORIENTACIÓN</h1></a></li>
+					
+				</ul> 	
+				<p>
+					<ul data-role="listview" data-theme="a">
+						<li>
+							<h2>GIRA EL PLANISFERIO</h2>
+							
+						</li>
+						<li>
+							<h2>Haz coincidir la fecha con la hora</h2>
+						</li>
+						<li>
+								<p><h2>Y corrige la longitud</h2></p><br/>
+								<p>En la peninsula Ibérica </p>
+								<p>resta 2h en verano y 1h en invierno.</p>
+						</li>
+						<li>
+								<h2>La línea verde es el Horizonte</h2>
+						</li>		
+						<li>
+						
+								<h2>EL cenit está dentro</h2>
+						</li>						
+					</ul>	
+				</p>
+				<p>
+					<ul data-role="listview" data-theme="c">
+						<li>
+							<p>...</p>
+							<p>desarrollado</p>
+							<p>por <b>CHUSO</b></p>
+						
+							
+						</li>						
+					</ul>	
+				</p>		
+			</div><!-- /panel -->
+
+		<!--<a id="BSignRanking" href="#popSignRanking" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
+		<div data-role="popup" id="popSignRanking" data-theme="a" class="ui-corner-all">
+		    <form id="FSignRanking">
+		        <div style="padding:10px 20px;">
+		            <div style="padding:10px 20px;" id="textSignRanking"><h3>Introduce nombre para entrar en el Ranking</h3></div>
+		            <label for="userplanis" class="ui-hidden-accessible">Nombre:</label>
+		            <input type="text" name="userplanis" id="nameSignRanking" value="" placeholder="nombre" data-theme="a">
+		            <button type="submit" data-theme="b" data-icon="check" id ="botSignRanking">Guardar</button>
+		        </div>
+		    </form>
+		</div>-->
+		<a id="BSignRanking" href="#popSignRanking" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
+		<div data-role="popup" id="popSignRanking" data-theme="a" class="ui-corner-all">
+		<a href="#" id ="xSignRanking" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+		    <form id="FSignRanking">
+		        <div style="padding:10px 20px;">
+		            <div style="padding:10px 20px;" id="textSignRanking"><h3>Introduce nombre para entrar en el Ranking</h3></div>
+		            <input type="text" id="nameSignRanking"  value="" placeholder="nombre" data-theme="a">
+		            <button data-theme="b" data-icon="check" id ="botSignRanking">Guardar</button>
+		        </div>
+		    </form>
+		</div>
+			
+	</div><!-- /pageGame -->
+
+<div data-role="page" id="pantalla2" data-theme="a">
+	   <div data-role="header"  id="pantalla2h">
+	                <h1>RANKING EN ESTE DISPOSITIVO</h1>
+	        <a href="#pantalla"  data-icon="back" data-iconpos="notext">VOLVER</a>
+	       
+		</div><!-- /header -->
+	
+		<div data-role="content" id="pantalla2c" >
+	<div class="ui-grid-a">
+    <div class="ui-block-a" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">POSICIÓN</div></div>          
+    <div class="ui-block-b" style="width:60%" ><div class="ui-bar ui-bar-c" style="height:2em">NOMBRE</div></div>            
+    <div class="ui-block-c" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">NIVEL</div></div>             
+    <div class="ui-block-a" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">1</div></div>                 
+    <div class="ui-block-b" style="width:60%" ><div id="rankfield00" class="ui-bar ui-bar-c" style="height:2em"></div></div> 
+    <div class="ui-block-c" style="width:20%" ><div id="rankfield01" class="ui-bar ui-bar-c" style="height:2em"></div></div> 
+    <div class="ui-block-a" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">2</div></div>                 
+    <div class="ui-block-b" style="width:60%" ><div id="rankfield10" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-c" style="width:20%" ><div id="rankfield11" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-a" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">3</div></div>                  
+    <div class="ui-block-b" style="width:60%" ><div id="rankfield20" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-c" style="width:20%" ><div id="rankfield21" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-a" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">4</div></div>                  
+    <div class="ui-block-b" style="width:60%" ><div id="rankfield30" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-c" style="width:20%" ><div id="rankfield31" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-a" style="width:20%" ><div class="ui-bar ui-bar-c" style="height:2em">5</div></div>                  
+    <div class="ui-block-b" style="width:60%" ><div id="rankfield40" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    <div class="ui-block-c" style="width:20%" ><div id="rankfield41" class="ui-bar ui-bar-c" style="height:2em"></div></div>  
+    
+    </div>
+	</div><!-- /content -->
+
+	</div>
+	 
+	
+	
+	
+	</body>
+	</html>
