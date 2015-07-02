@@ -2,7 +2,7 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.chuso.planisferio"
-		version   = "1.0.0">
+		version   = "2.0.0">
 		<name>Planisferio-Interactivo</name>
 		<description>
  Aplicación para apreder las constelaciones y aprender a utilizar un planisferio tradicional.		</description>
