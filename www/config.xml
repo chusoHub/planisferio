@@ -6,7 +6,7 @@
 		<name>Planisferio-Interactivo</name>
 		<description>
  Aplicación para apreder las constelaciones y aprender a utilizar un planisferio tradicional.		</description>
-		 <preference name="phonegap-version" value="5.2.0" />
+		 <preference name="phonegap-version" value="3.3.0" />
 		
 		<preference name="orientation" value="default" />
 		<preference name="target-device" value="universal" />
